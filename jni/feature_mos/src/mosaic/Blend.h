@@ -54,19 +54,19 @@ class Blend {
 
 public:
 
-  static const int BLEND_TYPE_NONE    = -1;
-  static const int BLEND_TYPE_FULL    = 0;
-  static const int BLEND_TYPE_PAN     = 1;
-  static const int BLEND_TYPE_CYLPAN  = 2;
-  static const int BLEND_TYPE_HORZ   = 3;
+  static constexpr int BLEND_TYPE_NONE    = -1;
+  static constexpr int BLEND_TYPE_FULL    = 0;
+  static constexpr int BLEND_TYPE_PAN     = 1;
+  static constexpr int BLEND_TYPE_CYLPAN  = 2;
+  static constexpr int BLEND_TYPE_HORZ   = 3;
 
-  static const int STRIP_TYPE_THIN      = 0;
-  static const int STRIP_TYPE_WIDE      = 1;
+  static constexpr int STRIP_TYPE_THIN      = 0;
+  static constexpr int STRIP_TYPE_WIDE      = 1;
 
-  static const int BLEND_RET_ERROR        = -1;
-  static const int BLEND_RET_OK           = 0;
-  static const int BLEND_RET_ERROR_MEMORY = 1;
-  static const int BLEND_RET_CANCELLED    = -2;
+  static constexpr int BLEND_RET_ERROR        = -1;
+  static constexpr int BLEND_RET_OK           = 0;
+  static constexpr int BLEND_RET_ERROR_MEMORY = 1;
+  static constexpr int BLEND_RET_CANCELLED    = -2;
 
   Blend();
   ~Blend();
@@ -119,8 +119,8 @@ protected:
   void CropFinalMosaic(YUVinfo &imgMos, MosaicRect &cropping_rect);
 
 private:
-   static const float LIMIT_SIZE_MULTIPLIER = 5.0f * 2.0f;
-   static const float LIMIT_HEIGHT_MULTIPLIER = 2.5f;
+   static constexpr float LIMIT_SIZE_MULTIPLIER = 5.0f * 2.0f;
+   static constexpr float LIMIT_HEIGHT_MULTIPLIER = 2.5f;
    int MosaicSizeCheck(float sizeMultiplier, float heightMultiplier);
    void RoundingCroppingSizeToMultipleOf8(MosaicRect& rect);
 };
